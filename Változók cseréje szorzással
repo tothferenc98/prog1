@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() 
+{
+  int a=5,b=2;
+  printf("Eredeti: a=%d, b=%d\n",a,b);
+
+  if (a == 0)
+  {
+    a = b;
+    b = 0;
+    printf("Cserélt: a=%d, b=%d\n",a,b);
+  }
+  else if (b == 0)
+  {
+    b = a;
+    a = 0;
+    printf("Cserélt: a=%d, b=%d\n",a,b);
+  }
+  else
+  {
+    a = (a * b);
+    b = (a / b);
+    a = (a / b);
+    printf("Cserélt: a=%d, b=%d\n",a,b);
+  }
+  return 0;
+}
