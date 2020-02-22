@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() 
+{
+  int a=5,b=2;
+  printf("Eredeti: a=%d, b=%d\n",a,b);
+
+  a = a xor b;
+  b = b xor a;
+  a = a xor b;
+
+  printf("Cserélt: a=%d, b=%d\n",a,b);
+
+  return 0;
+}
