@@ -1,0 +1,13 @@
+#include <omp.h>
+#include <unistd.h>
+#include <stdio.h>
+
+int
+main ()
+{
+#pragma omp parallel
+{
+for (;;);
+}
+return 0;
+}
