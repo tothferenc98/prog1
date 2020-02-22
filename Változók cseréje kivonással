@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() 
+{
+  int a=5,b=2;
+    printf("Eredeti: a=%d, b=%d\n",a,b);
+
+  a = (a + b);
+  b = (a - b);
+  a = (a - b);
+  printf("Cserélt: a=%d, b=%d\n",a,b);
+
+  return 0;
+}
