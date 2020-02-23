@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <curses.h>
+#include <unistd.h>
+
+int main (void)
+{
+    int x1 = 0, x2 = 0, y1 = 0, y2 = 0;
+    int szelesseg = 80, magassag = 24;
+
+    WINDOW *ablak;
+    ablak = initscr ();
+    nodelay (ablak, true);
+
+    for (;;)
+    {
+        x1 = (x1 - 1) % szelesseg;
+        x2 = (x2 + 1) % szelesseg;
+
+        y1 = (y1 - 1) % magassag;
+        y2 = (y2 + 1) % magassag;
+
+        //clear ();
+
+        mvprintw (0, 0,   "________________________________________________________________________________");
+        mvprintw (25, 0,  "________________________________________________________________________________");
+        mvprintw (abs ((1+y1 + (magassag - y2))),
+                  abs ((x1 + (szelesseg - x2))), "X");
+
+        refresh ();
+        usleep (180000);
+
+    }
+    return 0;
+}
