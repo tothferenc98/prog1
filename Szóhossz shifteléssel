@@ -1,4 +1,4 @@
-#include "../std_lib_facilities.h"
+#include <stdio.h>
 
 int main() 
 {
@@ -9,6 +9,6 @@ int main()
 		a<<=1;
 		szamolo++;
 	}
-	cout << szamolo;
+	printf("Szóhossz: %d",szamolo);
 	return 0;
 }
