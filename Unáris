@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void)
+{
+  printf("Adj meg egy decimális számot: ");
+  int decimalis=0;
+  scanf("%d", &decimalis);
+  printf("Unáris változata: ");
+  for (int i = 0; i < decimalis; ++i)
+  {
+    printf("1");
+  }
+  printf("\n");
+  return 0;
+}
