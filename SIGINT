@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <signal.h>
+
+void jelkezelo(){
+
+printf("Valami..");
+}
+
+
+int main(){	
+for(;;)
+{
+
+if(signal(SIGINT,SIG_IGN)!=SIG_IGN)
+	signal(SIGINT,jelkezelo);
+}
+
+return 0;
+}
+
